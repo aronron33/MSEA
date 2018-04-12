@@ -2,7 +2,7 @@
 alloc(skill_id_hook,128)
 label(skill_id_return)
 label(normal)
-define(skill_id,#%arg1) //Change #00000000 to your skillID
+define(skill_id,#00000000 ) //Change #00000000 to your skillID
 
 alloc(delay,8)
 
@@ -23,7 +23,7 @@ skill_id_return:
 
 skill_id_hook:
 inc [delay]
-cmp [delay],#%arg2
+cmp [delay],#5
 jne normal
 mov [delay],01
 mov [esi+00013698],skill_id
