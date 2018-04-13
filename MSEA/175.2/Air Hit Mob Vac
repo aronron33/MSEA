@@ -24,13 +24,13 @@ mov ebp,esp
 push -01
 jmp return
 
-// New AOB 55 8B EC 6A FF 68 82 39 7C 02 64 A1 00 00 00 00
-014A0AB0: // 81 ? EB 20 42 01 74 ? 81 ? 02 1D 42 01 74 [FUNCTION START]
-jmp hook
+// New AOB 55 8B EC 6A FF 68 ? ? 7C 02 64 A1 00 00 00 00 [2nd last from 014A0xxx to 014A9xxx]
+014A6590: // 81 ? EB 20 42 01 74 ? 81 ? 02 1D 42 01 74 [FUNCTION START]
+jmp hook // 55 8B EC 6A FF 68 ? ? ? ? 64 A1 00 00 00 00 50 81 EC
 return:
 
 [DISABLE]
-014A0AB0:
+014A6590:
 push ebp
 mov ebp,esp
 push -01
